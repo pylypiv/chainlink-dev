@@ -1,4 +1,29 @@
-# Chainlink Dev
+## New Logic
+
+Run `npm start` for instaling network1 and network2 through docker-compose
+
+List `network1` contains:
+- ganach-cli 
+- migrate our smart-contracts to above ganache (network1) and save into project/truffle/build/addrs_network1.env certain env var.
+- start up posgres for chainlink node in network1
+- start up chainlink node in network1
+
+
+List `network2` contains:
+- ganach-cli 
+- migrate our smart-contracts to above ganache (network2) and save into project/truffle/build/addrs_network2.env certain env var.
+- start up posgres for chainlink node in network2
+- start up chainlink node in network2
+
+
+Details:
+- The credentials to login to the Chainlink node are user@example.com password.
+- Transfer from ganache account to address chainlin node some ETH for work chainlink node (see in npm run chainlink:logs:network1)
+- See package.json and docker-compose for detail.
+
+
+
+## Chainlink Dev
 
 This project contains tooling for Chainlink local development. It builds upon existing tooling and depends upon their
 conventions (e.g. Ganache running at default port 7545).
