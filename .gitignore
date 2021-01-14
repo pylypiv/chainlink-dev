@@ -1,4 +1,6 @@
-build/
+!truffle/build/addrs_network1.env
+!truffle/build/addrs_network2.env
+truffle/build/
 network1/chainlink/root/
 network2/chainlink/root/
 pgadmin/
@@ -32,12 +34,6 @@ node_modules
 
 # Debug log from npm
 npm-debug.log
-
-# local env variables
-.env
-
-# truffle build directory
-build/
 
 # macOS
 .DS_Store
