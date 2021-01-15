@@ -15,10 +15,11 @@ module.exports = async (deployer, network, accounts) => {
 	  			      await deployer.deploy(Oracle, linkToken.address);
 	  let oracle =    await Oracle.deployed();
 	  	  
-	  await deployer.deploy(GanacheChainlinkClient, linkToken.address);
+	  				  await deployer.deploy(GanacheChainlinkClient, linkToken.address);
+	  let client =    await GanacheChainlinkClient.deployed();
 
 	 //save address for chainlink node in certain network
-	 await writeEnv(linkToken.address, oracle.address);
+	 await writeEnv(linkToken.address, oracle.address, client.address);
 
 	}
 

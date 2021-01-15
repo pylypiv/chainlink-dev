@@ -21,7 +21,7 @@ function getSessionCookie() {
       
       res.on('data', () => { /* DO NOTHING */ });
       res.on('end', () => {
-        resolve(res.headers["set-cookie"][0]);
+        resolve(res.headers["set-cookie"]);
       });
 
       res.on('error', (err) => {

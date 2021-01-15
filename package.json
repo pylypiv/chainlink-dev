@@ -11,20 +11,20 @@
     "up:all": "docker-compose up -d && docker-compose ps ",
     "remove:stop-remove-containers": "docker-compose down --remove-orphans",
     "chainlink:logs:network1": "docker logs chainlink-dev_chainlink_net1_1 -f ",
+    "ganache:logs:network1": "docker logs chainlink-dev_ganache_net1_1 -f ",
+    "ganache:logs:network2": "docker logs chainlink-dev_ganache_net2_1 -f ",
     "chainlink:logs:network2": "docker logs chainlink-dev_chainlink_net2_1 -f ",
-
-    
     "remix:chainlink": "npx remixd -s ./node_modules/chainlink/contracts --remix-ide https://remix.ethereum.org",
     "remix:truffle": "npx remixd -s ./truffle/contracts --remix-ide https://remix.ethereum.org",
     "test": "npm run truffle:test",
     "truffle:fund-client": "cd ./truffle && npx truffle exec ./scripts/fund-client.js --network ganache && cd ..",
     "truffle:init-setup": "npm run truffle:fund-client && npm run truffle:prep-node",
     "truffle:prep-node": "cd ./truffle && npx truffle exec ./scripts/prep-node.js --network ganache && cd .."
-    
   },
   "license": "MIT",
   "dependencies": {
     "chainlink": "^0.7.8",
+    "dotenv": "^8.2.0",
     "link_token": "^1.0.6",
     "remixd": "^0.1.8-alpha.14",
     "truffle": "^5.0.43"
